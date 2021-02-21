@@ -25,14 +25,17 @@ dbConnection.close()
 
 
 text = " ".join(review for review in frame.title)
+
 # Create stopword list:
 stopwords = set(STOPWORDS)
 stopwords.update(["de", "da", "na", "em", "que", "por"])
+
 # Generate a word cloud image
 wordcloud = WordCloud(stopwords=stopwords, background_color="white", width=800, height= 200, collocations=False).generate(text)
 wordcloud.to_file('wordcloud.png')
-
 filename = 'wordcloud.png'
+
+# Upload file
 session = ftplib.FTP('ftp host','ftp user','ftp pass')
 session.cwd('htdocs/imgs')
 with open(filename, "rb") as file:
