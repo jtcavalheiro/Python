@@ -3,6 +3,7 @@
 #   https://coinmarketcap.com/api/
 #
 #   This script saves data to a google sheets file using gsheets.py
+#   https://github.com/jtcavalheiro/Python/blob/master/gsheets.py
 #
 
 from requests import Request, Session
