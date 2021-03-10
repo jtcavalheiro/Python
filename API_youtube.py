@@ -34,7 +34,7 @@ def ytvideos(channel, order):
         'part': 'snippet',
         'channelId': channel,
         'order' : order,
-        'key': 'your key'
+        'key': 'your google API key'
     }
 
     api_result = requests.get('https://www.googleapis.com/youtube/v3/search', params)
